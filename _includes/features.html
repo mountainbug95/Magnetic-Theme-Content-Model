@@ -1,0 +1,16 @@
+<!-- One -->
+<section id="one" class="features">
+    <header class="major">
+        <h2>{{ include.section.title }}</h2>
+        {{ include.section.subtitle | markdownify }}
+    </header>
+    <div class="content">
+        {% for feature in include.section.features %}
+            <section class="feature">
+                <span class="icon major {{ feature.icon }}"></span>
+                <h3>{{ feature.title }}</h3>
+                {{ feature.text | markdownify }}
+            </section>
+        {% endfor %}
+    </div>
+</section>

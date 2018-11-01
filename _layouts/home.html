@@ -1,0 +1,19 @@
+---
+layout: body
+---
+
+    <!-- Main -->
+    <div id="main">
+        
+        {% include banner.html %}
+        
+        {% for section in page.sections %}
+            {% assign expr_1 = forloop.index | modulo: 2 %}
+            {% if expr_1 == 0 %}
+                {% assign cyc = '' %}{% else %}
+                {% assign cyc = 'alt' %}{% endif %}
+            
+            {% include {{ section.component }} section=section page=page cyc=cyc %}
+        {% endfor %}
+        
+    </div>

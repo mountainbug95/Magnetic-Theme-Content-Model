@@ -1,0 +1,124 @@
+---
+label: Config
+hide_body: true
+is_partial: false
+fields:
+  - type: text
+    name: title
+    label: Title
+    description: Site title
+    config:
+      required: true
+  - type: field_group
+    name: menu
+    label: Menu Configuration
+    fields:
+      - type: field_group_list
+        name: actions
+        label: Action Buttons
+        config:
+          labelField: label
+        fields:
+          - type: text
+            name: label
+            label: Button Label
+            description: The text displayed inside the button
+          - type: text
+            name: url
+            label: Button URL
+  - type: field_group
+    name: footer
+    label: Footer Configuration
+    fields:
+      - type: field_group
+        name: about
+        label: About Section
+        fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+            description: Displays the section in the site footer
+            default: false
+          - type: text
+            name: title
+            label: Section Title
+          - type: textarea
+            name: text
+            label: Section Text
+            description: The text displayed below the section title
+            config:
+              wysiwyg: true
+              schema:
+                format: markdown
+          - type: field_group_list
+            name: actions
+            label: Section Action Buttons
+            config:
+              labelField: label
+            fields:
+              - type: include
+                name: include_action
+                label: Include action
+                template: action
+      - type: field_group
+        name: contact
+        label: Contact Section
+        fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+            description: Displays the section in the site footer
+            default: false
+          - type: text
+            name: title
+            label: Section Title
+          - type: field_group_list
+            name: social_icons
+            label: Social Media Icons
+            description: A list of social media icons displayed below the section title
+            config:
+              labelField: text
+            fields:
+              - type: text
+                name: text
+                label: Icon Text
+                description: The text displayed beside the icon
+                config:
+                  required: true
+              - type: text
+                name: icon
+                label: Icon
+                description: Font Awesome icon
+      - type: field_group
+        name: address_section
+        label: Address Section
+        fields:
+          - type: boolean
+            name: enabled
+            label: Enabled
+            description: Displays the section in the site footer
+            default: false
+          - type: text
+            name: title
+            label: Section Title
+          - type: textarea
+            name: address
+            label: Address
+      - type: text
+        name: copyright
+        label: Copyright Text
+        description: >-
+          The text displayed in the copyright section at the bottom of the
+          footer
+  - type: select
+    name: palette
+    label: Color Palette
+    description: The color pallete used for the site
+    config:
+      required: true
+      source:
+        type: custom
+      options:
+        - blue
+        - green
+        - orange

@@ -1,0 +1,70 @@
+title: Magnetic
+baseurl: /
+menu:
+  actions:
+    - label: Log In
+      url: generic.md
+    - label: Sign Up
+      url: generic.md
+footer:
+  about:
+    enabled: true
+    title: Proin sed ultricies
+    text: >-
+      Praesent egestas quam at lorem imperdiet lobortis. Mauris condimentum et
+      euismod ipsum, at ullamcorper libero dolor auctor sit amet. Proin
+      vulputate.
+    actions:
+      - label: Learn More
+        url: generic.md
+        is_scrolly: false
+        is_primary: false
+  contact:
+    enabled: true
+    title: Get in Touch
+    social_icons:
+      - text: (000) 000-0000
+        icon: fa-phone
+      - text: information@untitled.tld
+        icon: fa-envelope
+        url: '#'
+      - text: '@untitled-tld'
+        icon: fa-twitter
+        url: '#'
+      - text: facebook.com/untitled
+        icon: fa-facebook
+        url: '#'
+  address_section:
+    enabled: true
+    title: Mailing Address
+    address: |-
+      Untitled Corp
+      1234 Fictional Road
+      Suite 5432
+      Nashville, TN 00000
+      USA
+  copyright: Copyright &copy; Untitled Corp. All rights reserved.
+palette: blue
+palettes:
+  blue:
+    sass:
+      accent1: '#c4918a'
+      accent2: '#6093c4'
+      highlight: '#ffb6af'
+  green:
+    sass:
+      accent1: '#858fc9'
+      accent2: '#61c095'
+      highlight: '#9eaaed'
+  orange:
+    sass:
+      accent1: '#8ac48f'
+      accent2: '#e4984e'
+      highlight: '#8ac48f'
+sass:
+  indentWidth: 4
+  style: nested
+  precision: 10
+plugins:
+  - jekyll-menus
+permalink: '/posts/:slug:output_ext'

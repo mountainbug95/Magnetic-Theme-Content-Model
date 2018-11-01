@@ -1,0 +1,98 @@
+---
+---
+
+// Misc.
+$misc: (
+    z-index-base:		10000
+);
+
+// Duration.
+$duration: (
+    nav:				0.5s,
+    transition:			0.2s
+);
+
+// Size.
+$size: (
+    element-height:		3.25em,
+    element-margin:		2em,
+    letter-spacing:		0.25em,
+    inner:				76em
+);
+
+// Font.
+$font: (
+    family:				('Roboto', Helvetica, sans-serif),
+    family-fixed:		('Courier New', monospace),
+    weight:				300,
+    weight-bold:		700
+);
+
+// Palette.
+{% assign palette = site.palettes[site.palette].sass %}
+$palette: (
+    bg:					#32383f,
+    bg-transparent:		rgba(36,42,48,0.9),
+    bg-alt:				#6a707c,
+    fg:					#ffffff,
+    fg-light:			#ffffff,
+    fg-bold:			#ffffff,
+    border:				#434b55,
+    border-bg:			#383F47,
+    accent1:			{{ palette.accent1 }},
+    accent2:			{{ palette.accent2 }},
+    highlight:			{{ palette.highlight }}
+);
+@import 'libs/functions';
+@import 'libs/mixins';
+@import 'libs/vendor';
+@import 'libs/breakpoints';
+@import 'libs/html-grid';
+@import 'font-awesome.min.css';
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700,300italic,700italic');
+
+/*
+	Magnetic by Pixelarity
+	pixelarity.com | hello@pixelarity.com
+	License: pixelarity.com/license
+*/
+
+// Breakpoints.
+
+	@include breakpoints((
+		xlarge:   ( 1281px,  1680px ),
+		large:    ( 981px,   1280px ),
+		medium:   ( 737px,   980px  ),
+		small:    ( 481px,   736px  ),
+		xsmall:   ( 361px,   480px  ),
+		xxsmall:  ( null,    360px  )
+	));
+
+// Base.
+
+	@import 'base/reset';
+	@import 'base/page';
+	@import 'base/typography';
+
+// Component.
+
+	@import 'components/row';
+	@import 'components/box';
+	@import 'components/button';
+	@import 'components/form';
+	@import 'components/icon';
+	@import 'components/image';
+	@import 'components/list';
+	@import 'components/actions';
+	@import 'components/icons';
+	@import 'components/contact';
+	@import 'components/section';
+	@import 'components/table';
+
+// Layout.
+
+	@import 'layout/header';
+	@import 'layout/menu';
+	@import 'layout/banner';
+	@import 'layout/main';
+	@import 'layout/footer';

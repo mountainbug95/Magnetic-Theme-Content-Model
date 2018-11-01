@@ -1,0 +1,43 @@
+<!-- Footer -->
+<section id="footer">
+    <div class="inner">
+        {% if site.footer.about.enabled %}
+            <section class="about">
+                <h3>{{ site.footer.about.title }}</h3>
+                {{ site.footer.about.text | markdownify }}
+                {% if site.footer.about.actions %}
+                    <ul class="actions">
+                        {% for action in site.footer.about.actions %}
+                            <li><a href="{% assign expr_1 = action.url | starts_with: '#' %}{% if expr_1 %}{{ action.url }}{% else %}{{ action.url | link | relative_url }}{% endif %}" class="button{% if action.is_primary %} primary{% endif %}{% if action.is_scrolly %} scrolly{% endif %}">{{ action.label }}</a></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            </section>
+        {% endif %}
+        {% if site.footer.contact.enabled %}
+            <section>
+                <h3>{{ site.footer.contact.title }}</h3>
+                <ul class="contact">
+                    {% for item in site.footer.contact.social_icons %}
+                        {% if item.url %}
+                            <li class="{{ item.icon }}"><a href="{{ item.url }}">{{ item.text }}</a></li>
+                        {% else %}
+                            <li class="{{ item.icon }}">{{ item.text }}</li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </section>
+        {% endif %}
+        {% if site.footer.address_section.enabled %}
+            <section>
+                <h3>{{ site.footer.address_section.title }}</h3>
+                <p>{{ site.footer.address_section.address | newline_to_br }}</p>
+            </section>
+        {% endif %}
+    </div>
+    {% if site.footer.copyright %}
+        <div class="copyright">
+            <p>{{ site.footer.copyright }}</p>
+        </div>
+    {% endif %}
+</section>

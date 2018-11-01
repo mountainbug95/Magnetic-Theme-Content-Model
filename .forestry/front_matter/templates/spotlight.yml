@@ -1,0 +1,36 @@
+---
+label: Spotlight Section
+hide_body: true
+is_partial: true
+display_field: title
+fields:
+  - type: text
+    name: title
+    label: Section Title
+    default: Spotlight Title
+    config:
+      required: true
+  - type: textarea
+    name: text
+    label: Spotlight Text
+    description: The text displayed below the spotlight title
+    config:
+      wysiwyg: true
+      schema:
+        format: markdown
+  - type: file
+    name: img
+    label: Spotlight Image
+    description: The image displayed beside the spotlight content
+  - type: text
+    name: section_id
+    label: Section ID
+    default: spotlightID
+    config:
+      required: true
+  - type: text
+    name: component
+    hidden: true
+    default: spotlight.html
+    config:
+      required: true

@@ -1,0 +1,9 @@
+<!-- spotlight -->
+<section id="{{ include.section.section_id }}" class="spotlight {{ include.cyc }}">
+    {% if include.section.img %}
+        <div class="image"><img src="{{ include.section.img | relative_url }}" alt="" /></div><div class="content">
+    {% endif %}
+    <h2>{{ include.section.title }}</h2>
+    {{ include.section.text | markdownify }}
+    </div>
+</section>

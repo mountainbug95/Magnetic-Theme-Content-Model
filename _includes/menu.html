@@ -1,0 +1,16 @@
+<!-- Menu -->
+<nav id="menu">
+    <div class="inner">
+        <h2>Menu</h2>
+        <ul class="links">
+            {% for item in site.menus.main %}
+                <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+            {% endfor %}
+            {% if site.menu.actions %}
+                {% for action in site.menu.actions %}
+                    <li><a href="{% assign expr_1 = action.url | starts_with: '#' %}{% if expr_1 %}{{ action.url }}{% else %}{{ action.url | link | relative_url }}{% endif %}">{{ action.label }}</a></li>
+                {% endfor %}
+            {% endif %}
+        </ul>
+    </div>
+</nav>
