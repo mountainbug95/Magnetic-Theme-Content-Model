@@ -22,6 +22,8 @@ fields:
     name: img
     label: Spotlight Image
     description: The image displayed beside the spotlight content
+    config:
+      required: true
   - type: text
     name: section_id
     label: Section ID
