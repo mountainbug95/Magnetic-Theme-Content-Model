@@ -70,7 +70,7 @@ sections:
     template: spotlight
   - title: Sed euismod nullam
     subtitle: |-
-      Odio mattis nec velit eu, luctus dictum diam. Quis
+      Odio mattis nec velit eu, luctus dictum diam. Quis  
       tempus que ornare purus a bibendum ultricies
     section_id: five
     actions:
