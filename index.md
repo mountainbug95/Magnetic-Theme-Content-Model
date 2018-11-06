@@ -37,7 +37,7 @@ sections:
           euismod habitant lorem ipsum dolor.
         icon: fa-newspaper-o
     component: features.html
-    template: features
+    widget: features
   - title: Volutpat ante libero
     text: >-
       Praesent egestas quam at lorem imperdiet lobortis. Mauris condimentum et
@@ -47,7 +47,7 @@ sections:
     img: images/pic01.jpg
     section_id: two
     component: spotlight.html
-    template: spotlight
+    widget: spotlight
   - title: Elit auctor tempus
     text: >-
       Praesent egestas quam at lorem imperdiet lobortis. Mauris condimentum et
@@ -57,7 +57,7 @@ sections:
     img: images/pic02.jpg
     section_id: three
     component: spotlight.html
-    template: spotlight
+    widget: spotlight
   - title: Porta vestibulum
     text: >-
       Praesent egestas quam at lorem imperdiet lobortis. Mauris condimentum et
@@ -67,7 +67,7 @@ sections:
     img: images/pic03.jpg
     section_id: four
     component: spotlight.html
-    template: spotlight
+    widget: spotlight
   - title: Sed euismod nullam
     subtitle: |-
       Odio mattis nec velit eu, luctus dictum diam. Quis  
@@ -79,7 +79,7 @@ sections:
         is_scrolly: false
         is_primary: false
     component: cta.html
-    template: cta
+    widget: cta
 menus:
   main:
     title: Home
