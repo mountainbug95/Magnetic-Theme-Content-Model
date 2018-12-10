@@ -1,4 +1,5 @@
 ---
+label: Action
 is_partial: true
 display_field: label
 fields:

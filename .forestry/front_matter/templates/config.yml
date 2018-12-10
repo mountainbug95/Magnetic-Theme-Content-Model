@@ -58,7 +58,7 @@ fields:
             fields:
               - type: include
                 name: include_action
-                label: Include action
+                label: Action
                 template: action
       - type: field_group
         name: contact
@@ -122,3 +122,43 @@ fields:
         - blue
         - green
         - orange
+  - type: field_group
+    name: palettes
+    hidden: true
+    fields:
+      - type: field_group
+        name: blue
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: text
+                name: accent1
+              - type: text
+                name: accent2
+              - type: text
+                name: highlight
+      - type: field_group
+        name: green
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: text
+                name: accent1
+              - type: text
+                name: accent2
+              - type: text
+                name: highlight
+      - type: field_group
+        name: orange
+        fields:
+          - type: field_group
+            name: sass
+            fields:
+              - type: text
+                name: accent1
+              - type: text
+                name: accent2
+              - type: text
+                name: highlight

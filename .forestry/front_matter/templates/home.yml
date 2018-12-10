@@ -35,7 +35,7 @@ fields:
         fields:
           - type: include
             name: include_action
-            label: Include action
+            label: Action
             template: action
   - type: blocks
     name: sections
