@@ -1,0 +1,17 @@
+---
+label: Palette
+is_partial: true
+fields:
+  - type: field_group
+    name: sass
+    label: SASS
+    fields:
+      - type: text
+        name: accent1
+        label: Accent1
+      - type: text
+        name: accent2
+        label: Accent2
+      - type: text
+        name: highlight
+        label: Highlight

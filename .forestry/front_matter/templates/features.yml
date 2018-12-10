@@ -50,6 +50,7 @@ fields:
         description: (Font Awesome icon) displayed above the feature title
   - type: text
     name: component
+    label: Section Component
     hidden: true
     default: features.html
     config:

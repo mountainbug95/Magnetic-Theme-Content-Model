@@ -37,6 +37,7 @@ fields:
         template: action
   - type: text
     name: component
+    label: Section Component
     hidden: true
     default: cta.html
     config:
